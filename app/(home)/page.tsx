@@ -30,14 +30,13 @@ const Home = async () => {
         </h2>
         <BookingItem />
       </div>
-      <div className="">
+      <div className="px-5 mt-6">
         <h2 className="text-sm mb-3 uppercase text-gray-400 font-bold">
           Recomendados
         </h2>
-        <div>
+        <div className="flex gap-2 overflow-x-auto [&::-webkit-scrollbar]:hidden"> {/* &::-webkit-scrollbar esconde a scrollbar */}
           {barberShops.map((barbershop) => (
             <BarbershopItem key={barbershop.id} barbershop={barbershop} />
-
           ))}
         </div>
       </div>
